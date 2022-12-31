@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 v1_urlpatterns = [
-    path('', include('post.api.urls', namespace='post'))
+    path('post/', include('post.api.urls', namespace='post')),
 ]
 
 urlpatterns = [
