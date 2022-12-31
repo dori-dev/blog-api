@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.contrib.auth.models import User as UserModel
 from django.contrib.auth import get_user_model
-from posts.models import Post
+from post.models import Post
 
 User: UserModel = get_user_model()
 

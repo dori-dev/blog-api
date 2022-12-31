@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from posts.admin.post import PostAdmin
-from posts.models import (
+from post.admin.post import PostAdmin
+from post.models import (
     Post as PostModel,
 )
 
