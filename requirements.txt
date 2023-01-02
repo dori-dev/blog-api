@@ -2,3 +2,5 @@ dj-rest-auth==2.2.5
 Django==4.1.4
 django-allauth==0.52.0
 djangorestframework==3.14.0
+coreapi==2.3.3
+PyYAML==6.0
