@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 3rd-party-apps
     'rest_framework',
+    'rest_framework.authtoken',
     # local-apps
     'post.apps.PostConfig',
 ]
@@ -131,5 +132,9 @@ REST_FRAMEWORK = {
     'DEFAULT_VERSIONING_CLASS': 'utils.versioning.BaseVersioning',
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
-    ]
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ],
 }
