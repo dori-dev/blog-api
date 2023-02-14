@@ -2,12 +2,12 @@ from django.db import models
 from django.utils.translation import gettext as _
 from django.contrib.auth import get_user_model
 
-from utils import GeneralModel
+from utils import BaseModel
 
 User = get_user_model()
 
 
-class Post(GeneralModel):
+class Post(BaseModel):
     author = models.ForeignKey(
         User,
         verbose_name=_('Author'),
