@@ -28,16 +28,12 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
+LOCAL_APPS = [
+    # local-apps
+    'post.apps.PostConfig',
+]
 
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django.contrib.sites',
+THIRD_PARTY_APPS = [
     # 3rd-party-apps
     'rest_framework',
     'rest_framework.authtoken',
@@ -47,8 +43,20 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'dj_rest_auth',
     'dj_rest_auth.registration',
-    # local-apps
-    'post.apps.PostConfig',
+]
+
+
+# Application definition
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.sites',
+    *THIRD_PARTY_APPS,
+    *LOCAL_APPS,
 ]
 
 MIDDLEWARE = [

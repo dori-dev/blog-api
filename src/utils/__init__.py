@@ -1,1 +1,1 @@
-from .general_model import GeneralModel
+from .general_model import BaseModel #noqa
